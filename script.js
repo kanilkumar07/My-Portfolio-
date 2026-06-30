@@ -1,37 +1,42 @@
-// EmailJS Initialization
+alert("Script Loaded");
 
-emailjs.init("7Q9lvXMYmRZSeBLrs");
+emailjs.init({
+  publicKey: "7Q9lvXMYmRZSeBLrs",
+});
 
-const contactForm = document.getElementById("contact-form");
+const form = document.getElementById("contact-form");
 
-contactForm.addEventListener("submit", function(e){
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
 
-    e.preventDefault();
-
-    emailjs.sendForm(
-
-        "service_t6t9xa6",
-
-        "template_rraa0s7",
-
-        this
-
+  emailjs
+    .sendForm(
+      "service_t6t9xa6",
+      "template_rraaos7",
+      this
     )
-
-    .then(function(){
-
-        alert("✅ Message Sent Successfully!");
-
-        contactForm.reset();
-
+    .then(() => {
+      alert("Message Sent Successfully!");
+      form.reset();
     })
+    .catch((error) => {
 
-    .catch(function(error){
+    console.log(error);
 
-        alert("❌ Failed to Send Message");
+    alert(JSON.stringify(error));
 
-        console.log(error);
+});
+});
 
-    });
+/*=========================
+      Mobile Menu
+==========================*/
 
+
+
+const menuIcon = document.getElementById("menu-icon");
+const navbar = document.querySelector(".navbar");
+
+menuIcon.addEventListener("click", function () {
+    navbar.classList.toggle("active");
 });
