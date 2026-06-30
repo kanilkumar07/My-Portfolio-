@@ -13,22 +13,24 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
 </head>
 
 <body>
 
-<header>
+<header class="header">
 
-    <a href="#home" class="logo">Portfolio.</a>
+    <a href="#" class="logo">Portfolio.</a>
 
-    <nav>
+    <i class='bx bx-menu' id="menu-icon"></i>
 
+    <nav class="navbar">
         <a href="#home" class="active">Home</a>
         <a href="#about">About</a>
         <a href="#skills">Skills</a>
-        <a href="#project">Projects</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
-
     </nav>
 
 </header>
@@ -105,7 +107,7 @@ modern web applications.
             About <span>Me</span>
         </h2>
 
-        <h3>Full Stack Developer!</h3>
+        <h3>Full Stack Developer | Data Science Enthusiast</h3>
 
         <p>
 
@@ -120,9 +122,10 @@ modern web applications.
 
         </p>
 
-        <a href="#" class="btn">
-            More About Me
-        </a>
+        <a href="more-about.html" class="btn">
+    More About Me
+</a>
+          
 
     </div>
 
@@ -160,6 +163,7 @@ modern web applications.
             <span>Bootstrap</span>
             <span>PHP</span>
             <span>Flask</span>
+            <span>SQL</span>
             <span>MySQL</span>
 
         </div>
@@ -402,31 +406,16 @@ modern web applications.
 
         <form id="contact-form">
 
-    <input type="text"
-           name="from_name"
-           placeholder="Enter Your Name"
-           required>
+    <input type="text" name="from_name" placeholder="Enter Your Name" required>
 
-    <input type="email"
-           name="from_email"
-           placeholder="Enter Your Email"
-           required>
+    <input type="email" name="from_email" placeholder="Enter Your Email" required>
 
-    <input type="text"
-           name="subject"
-           placeholder="Enter Your Subject"
-           required>
+    <input type="text" name="subject" placeholder="Enter Your Subject" required>
 
-    <textarea
-           name="message"
-           rows="8"
-           placeholder="Enter Your Message"
-           required></textarea>
+    <textarea name="message" placeholder="Enter Your Message" required></textarea>
 
     <button type="submit" class="btn">
-
         Send Message
-
     </button>
 
 </form>
@@ -435,13 +424,14 @@ modern web applications.
 
 </section>
 
-<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-<script src="script.js"></script>
-
 <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script src="js/script.js"></script>
 
-<script src="script.js"></script>
+
+
+
+
+
 
 </body>
 
